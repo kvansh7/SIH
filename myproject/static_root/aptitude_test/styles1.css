@@ -1,0 +1,63 @@
+/* Reset default styles for the page */
+body, h1, button, p, label {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the page background with a gradient */
+body {
+    background: linear-gradient(to right, rgba(202, 202, 243, 0.8), rgba(162, 173, 217, 0.8), rgba(123, 146, 191, 0.8), rgba(82, 119, 166, 0.8), rgba(31, 93, 141, 0.8));
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+p{
+    font-size: larger;
+    font-weight:bold;
+    padding-bottom: 20px;
+}
+/* Style the quiz container */
+.quiz-container {
+    text-align: center;
+    width: 900px;
+    padding: 30x;
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px rgba(0.2, 0.2, 0.2); /* Add a subtle shadow */
+}
+
+h1 {
+    font-size: 5rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: black; /* Darken the text color */
+    font-weight: bolder;
+    text-shadow:2px 2px 4px grey; 
+}
+
+#submit-button{
+    background-color:whitesmoke;
+    color:black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: baseline;
+   
+}
+
+#submit-button:hover {
+    background-color:rgb(31, 93, 141);
+}
+img{
+    margin-left: 80%;
+    margin-bottom: 1000px;
+    /* align-items: center; */
+    position:absolute;
+    top:20%;
+}

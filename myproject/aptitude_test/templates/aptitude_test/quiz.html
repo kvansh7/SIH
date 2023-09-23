@@ -1,0 +1,37 @@
+{% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'aptitude_test/styles1.css' %}">
+    </head>
+    <body>
+        <h1>Aptitude Test</h1>
+        <div class="quiz-container">
+            <form method="post" action="{% url 'quiz_submit' %}">
+                {% csrf_token %}
+                {% for section in sections %}
+                    <h2>{{ section.name }}</h2>
+                    {% for question in section.question_set.all %}
+                        <div class="question">
+                            <p>{{ question.text }}</p>
+                            <div class="options">
+                                {% for option in question.option_set.all %}
+                                    <label>
+                                        <input type="radio" name="selected_option_{{ question.id }}" value="{{ option.id }}">
+                                        {{ option.text }}
+                                    </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <hr>
+                {% endfor %}
+                <button type="submit" id="submit-button">Submit</button>
+                <div><img src="{% static 'aptitude_test/margika 1.png' %}" alt="margika"></div>
+            </form>
+        </div>
+    </body>
+    </html>
+    
